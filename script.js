@@ -146,13 +146,13 @@ function playAgain() {
     score = 0;
     timeLeft = 75;
     startQuiz();
-}
+};
 
 function clearScores(){
-    highScoresStorage.clear;
+    highScoresStorage = [];
     scoreBoardInitials.textContent = "";
     scoreBoardScores.textContent = "";
-}
+};
 
 clearScoresBtn.addEventListener('click', clearScores);
 startOverBtn.addEventListener('click', playAgain)
