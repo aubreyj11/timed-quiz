@@ -8,12 +8,41 @@
     <title>Coding Quiz</title>
 </head>
 <body>
-    <div class="startContainer">
-        <h1 class="quizHeader">Coding Quiz!</h1>
-        <p class="entryText">You will be asked a series of questions regarding coding structures. 
-        Try to complete questions before the timer runs out, and then log 
-        your high score! Click Start Quiz to begin!</p>
-        <a href="./code.html" target=""><button class="startBtn">Start Quiz!</button></a>
+    <div class="container">
+        <div class="startPage" style="display:flex">
+            <h1 class="quizHeader">Coding Quiz!</h1>
+            <p class="entryText">You will be asked a series of questions regarding coding structures. 
+            Try to complete all of the questions before the timer runs out, and then log 
+            your high score to compare with others! Click Start Quiz to begin!</p>
+            <button id="startBtn">Start Quiz!</button>
+        </div>
+        <div class="quizPage" style="display:none">
+            <div id="timer">Seconds Left: 75</div>
+            <div id="questions">
+                <!-- <p>getElementByID will link an element's ____.</p> -->
+            </div>
+            <button class="questionBtn" id="a"></button>
+            <button class="questionBtn" id="b"></button>
+            <button class="questionBtn" id="c"></button>
+            <div id="result"></div>
+        </div>
+        <div id="resultPage" style="display:none">
+            <div id="finalScore"></div>
+            <input type="text" placeholder="Enter initials here to log high score!" id="initials">
+            <button id="submitInitials">Submit</button>
+        </div>
+        <div id="highScorePage" style="display:none">
+            <div id="scoreBoard"> 
+                <div id="scoreBoardHeader"> 
+                    <h2 class="scoreHeaders">Initials</h2>
+                    <h2 class="scoreHeaders">Scores</h2>
+                </div>
+                <div id="scoreBoardInitials"></div>
+                <div id="scoreBoardScores"></div>
+                </div>
+                <button id="startOverBtn">Play Again</button>
+            </div>
+        </div>
     </div>
 
 <script src="script.js"></script>
