@@ -13,6 +13,7 @@ var initials = document.getElementById('initials');
 var scoreBoardInitials = document.getElementById('scoreBoardInitials');
 var scoreBoardScores = document.getElementById('scoreBoardScores');
 var startOverBtn = document.getElementById('startOverBtn');
+var clearScoresBtn = document.getElementById('clearScoresBtn');
 var score = 0;
 var amountCorrect;
 var timeLeft = 75;
@@ -53,7 +54,7 @@ var quizQuestions = [{
     }
 
 ]; 
-var finalQuestionNum = quizQuestions.length;
+
 var currentQuestionIndex = 0;
 
 function loadCurrentQuestion() {
@@ -118,6 +119,7 @@ function showScore () {
 function highScores() {
     if (initials.value === "") {
         alert('Initials cannot be blank!');
+        return false;
     } else {
         var highScoresItem = {
             initials: initials.value,
@@ -125,7 +127,7 @@ function highScores() {
         }
         highScoresStorage.push(highScoresItem);
     };
-
+    
     resultPage.style.display = "none";
     highScorePage.style.display = "flex";
 
@@ -146,7 +148,13 @@ function playAgain() {
     startQuiz();
 }
 
+function clearScores(){
+    highScoresStorage.clear;
+    scoreBoardInitials.textContent = "";
+    scoreBoardScores.textContent = "";
+}
 
+clearScoresBtn.addEventListener('click', clearScores);
 startOverBtn.addEventListener('click', playAgain)
 submitInitials.addEventListener('click', highScores);
 startBtn.addEventListener('click', startQuiz);
