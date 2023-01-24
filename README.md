@@ -26,3 +26,5 @@ https://aubreyj11.github.io/timed-quiz/
 
 ## Usage
 Click the "Start Quiz" button and questions will begin to appear along with a timer that will start. As the user answers questions, more will be presented until they have finished the quiz. At that point, they are able to add their initials to save their high score.
+<br><br><br>
+![alt text](assets/screenshot.png)
